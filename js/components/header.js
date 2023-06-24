@@ -6,7 +6,6 @@ const HEADER_FIXED_HEIGHT = 100;
 
 export default class Header {
     constructor(element) {
-        console.log('Header');
         this.element = element;
         this.headerFixedSectionElement = document.querySelector(HEADER_FIXED_SECTION_SELECTOR);
         this.navLinks = this.element.querySelectorAll(NAV_LINK_SELECTOR);
