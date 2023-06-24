@@ -1,0 +1,68 @@
+#home {
+    background-image: radial-gradient(rgba($color-black, .4), rgba($color-black, .4)), 
+        url(../img/bg/ales-nesetril-Im7lZjxeLhg-unsplash.jpg);
+    // background-image: url(../img/bg/ales-nesetril-Im7lZjxeLhg-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: $color-grey-light-3;
+
+    strong {
+        color: $color-primary-dark;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        perspective: 1000px;
+    }
+
+    .greeting {
+        font-size: 2.4rem;
+        letter-spacing: 1px;
+        font-weight: 800;
+    }
+
+    .name {
+        display: block;
+        line-height: 1;
+    }
+
+    .role {
+        font-size: 2rem;
+        margin-top: 1.5rem;
+
+        .typer {
+            margin-left: .5rem;
+            font-size: 3rem;
+            font-style: italic;
+            color: currentColor !important;
+        }
+    }
+
+    .btn {
+        align-self: center;
+    }
+}
+
+#about {
+    /** TODO: Remove min-height and background-color styles */
+    min-height: 100vh;
+    background-color: cyan;
+}
+
+#portfolio {
+    min-height: 120vh;
+    background-color: yellowgreen;
+}
+
+#contact {
+    min-height: 110vh;
+    background-color: blueviolet;
+}

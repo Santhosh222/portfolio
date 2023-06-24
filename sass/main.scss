@@ -6,10 +6,11 @@
 @import "base/typography";
 @import "base/utilities";
 
-// Component imports
-
 @import "layout/footer";
 @import "layout/grid";
 @import "layout/header";
 
 @import "pages/home";
+
+// Component imports
+@import "components/button";

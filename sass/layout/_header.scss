@@ -1,0 +1,78 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    padding: $padding-vertical $padding-horizontal;
+    background-color: $color-black;
+
+    &--fixed {
+        position: fixed;
+        animation: moveInTop .4s ease-in;
+        height: 100px;
+    }
+
+    &__logo-box {
+        font-size: 4rem;
+    }
+
+    &__logo-link {
+        color: $color-primary;
+    }
+
+    &__logo {
+        font-family: 'Raleway', sans-serif;
+        font-style: italic;
+    }
+
+    &__nav {
+        font-size: 1.8rem;
+        font-weight: 300;
+
+        &-list {
+            list-style: none;
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        &-item {
+            perspective: 500px;
+        }
+
+        &-link {
+            color: $color-white;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+            position: relative;
+            transform-style: preserve-3d;
+            transform-origin: top;
+            transition: transform .3s;
+            background-color: #1C1C1C;
+
+            &::after {
+                content: attr(data-text);
+                background-color: $color-black;
+                color: $color-secondary;
+                position: absolute;
+                bottom: -100%;
+                left: 0;
+                padding: inherit;
+                transform: rotateX(-90deg);
+                transform-origin: inherit;
+                background-color: inherit;
+            }
+
+            &:hover,
+            &:active,
+            &--active {
+                transform: rotateX(90deg);
+            }
+        }
+    }
+}
