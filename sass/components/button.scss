@@ -12,7 +12,7 @@
     }
 
     &-secondary {
-        background-image: linear-gradient($color-primary, $color-primary-dark);
+        // background-image: linear-gradient($color-primary, $color-primary-dark);
         background-image: linear-gradient($color-secondary, $color-secondary-dark);
         color: $color-white;
         text-transform: uppercase;
@@ -20,7 +20,7 @@
         text-shadow: 0 10px 10px $color-black;
         transform: rotateX(60deg) rotateZ(30deg);
         transform-style: preserve-3d;
-        transition: transform .5s;
+        transition: transform .4s, letter-spacing 1s;
 
         &::before {
             content: '';
@@ -50,6 +50,7 @@
 
         &:hover {
             transform: rotateX(30deg) rotateZ(0) scale(1.1);
+            letter-spacing: 6px;
         }
 
         &:focus {

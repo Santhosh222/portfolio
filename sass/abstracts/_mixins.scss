@@ -5,6 +5,12 @@
     transform: translate(-50%, -50%);
 }
 
+@mixin btnStyle {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
 // MEDIA QUERY MANAGER
 /*
 0 - 600px:          Phone
@@ -17,6 +23,7 @@ $breakpoint argument choices:
 -   phone
 -   tab-port
 -   tab-land
+-   tab-land-and-higher
 -   big-desktop
 
 1em = 16px
@@ -32,6 +39,10 @@ $breakpoint argument choices:
 
     @if $breakpoint == tab-land {
         @media (max-width: 75em) { @content };          // 1200px
+    }
+
+    @if $breakpoint == tab-land-and-higher {
+        @media (min-width: 56.25em) { @content };          // 900px
     }
 
     @if $breakpoint == big-desktop {

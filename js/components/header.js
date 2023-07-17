@@ -1,8 +1,12 @@
 const HEADER_FIXED_CLASS = 'header--fixed';
 const NAV_LINK_ACTIVE_CLASS = 'header__nav-link--active';
+const MOBILE_NAV_EXPAND_BTN_CLASS = 'header__nav-mobile-expand';
+const MOBILE_NAV_EXPANDED_CLASS = 'header__nav-mobile--expanded';
 const HEADER_FIXED_SECTION_SELECTOR = '#about';
 const NAV_LINK_SELECTOR = '.header__nav-link';
 const HEADER_FIXED_HEIGHT = 100;
+const MOBILE_NAV_EXPAND_BTN_SELECTOR = '.header__nav-mobile-expand';
+const MOBILE_NAV_SELECTOR = '.header__nav-mobile';
 
 export default class Header {
     constructor(element) {
@@ -11,9 +15,11 @@ export default class Header {
         this.navLinks = this.element.querySelectorAll(NAV_LINK_SELECTOR);
         this.navLinkSections = [...this.navLinks]
             .map(navLink => document.querySelector(navLink.hash));
+        this.mobileNavExpandBtn = this.element.querySelector(MOBILE_NAV_EXPAND_BTN_SELECTOR);
+        this.mobileNav = this.element.querySelector(MOBILE_NAV_SELECTOR);
+        console.log({element: this.element, mobileNav: this.mobileNav});
 
         this.bindEvents();
-        this.activateNavLink(this.navLinks[0]);
     }
 
     bindEvents() {
@@ -22,6 +28,11 @@ export default class Header {
             this.positionFixed(windowTop);
             this.activateSectionNavLinks(windowTop);
         });
+
+        console.log({mobileNavExpandBtn: this.mobileNavExpandBtn, collapseMobileNav: this.collapseMobileNav});
+        this.mobileNavExpandBtn.addEventListener('click', () => this.expandAndCollapseMobileNav());
+        document.addEventListener('click', e => this.closeMenuOnDocumentClick(e));
+        // this.mobileNavCollapseBtn.addEventListener('click', () => this.collapseMobileNav());
     }
 
     /**
@@ -58,5 +69,32 @@ export default class Header {
 
     isActiveNavLink(navLink) {
         return navLink.classList.contains(NAV_LINK_ACTIVE_CLASS);
+    }
+
+    expandAndCollapseMobileNav(event) {
+        console.log('expandMobileNav - ', this.mobileNav);
+        const isMenuExpanded = this.mobileNavExpandBtn.getAttribute('aria-expanded') === 'true';
+        if (!isMenuExpanded) {
+            this.mobileNav.classList.add(MOBILE_NAV_EXPANDED_CLASS);
+        } else {
+            this.mobileNav.classList.remove(MOBILE_NAV_EXPANDED_CLASS);
+        }
+        this.mobileNavExpandBtn.setAttribute('aria-expanded', !isMenuExpanded);
+    }
+
+    closeMenuOnDocumentClick(event) {
+        const target = event.target;
+        const isMenuBtn = target.classList.contains(MOBILE_NAV_EXPAND_BTN_CLASS);
+        console.log({target, isMenuBtn});
+        if (isMenuBtn) {
+            return;
+        }
+
+        this.collapseMobileNav();
+    }
+
+    collapseMobileNav() {
+        this.mobileNav.classList.remove(MOBILE_NAV_EXPANDED_CLASS);
+        this.mobileNavExpandBtn.setAttribute('aria-expanded', false);
     }
 }

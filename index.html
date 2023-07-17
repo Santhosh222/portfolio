@@ -21,7 +21,7 @@
         <nav class="header__nav">
             <ul class="header__nav-list">
                 <li class="header__nav-item">
-                    <a href="#home" class="header__nav-link" data-text="Home">Home</a>
+                    <a href="#home" class="header__nav-link header__nav-link--active" data-text="Home">Home</a>
                 </li>
                 <li class="header__nav-item">
                     <a href="#about" class="header__nav-link" data-text="About">About</a>
@@ -33,7 +33,29 @@
                     <a href="#contact" class="header__nav-link" data-text="Contact">Contact</a>
                 </li>
             </ul>
+            <button class="header__nav-mobile-expand" 
+                aria-label="Menu" 
+                aria-expanded="false">
+                <span class="line"></span>
+            </button>
+            <div class="header__nav-mobile">
+                <ul class="header__nav-mobile-list">
+                    <li class="header__nav-mobile-item">
+                        <a href="#home" class="header__nav-mobile-link" data-text="Home">Home</a>
+                    </li>
+                    <li class="header__nav-mobile-item">
+                        <a href="#about" class="header__nav-mobile-link" data-text="About">About</a>
+                    </li>
+                    <li class="header__nav-mobile-item">
+                        <a href="#portfolio" class="header__nav-mobile-link" data-text="Portfolio">Portfolio</a>
+                    </li>
+                    <li class="header__nav-mobile-item">
+                        <a href="#contact" class="header__nav-mobile-link" data-text="Contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
+
     </header>
 
     <main>
@@ -51,7 +73,29 @@
         </section>
 
         <section id="about">
-
+            <div class="heading-container animated-container animated-container--fade-in animated-container--rotated">
+                <h2 class="u-center-text">About Me</h2>
+            </div>
+            <div class="image animated-container animated-container--fade-in animated-container--slide-right">
+                <img src="img/about-1.png" alt="About me">
+            </div>
+            <div class="text animated-container animated-container--fade-in animated-container--slide-left">
+                <p>
+                    I am an experienced professional specializing in AEM, Frontend, and Java development. 
+                    With expertise in a wide range of technologies, I bring a versatile skill set to deliver high-quality solutions.
+                </p>
+                <p>
+                    I am passionate about staying updated with the latest trends and technologies in the field of web development. 
+                    With my strong problem-solving skills and attention to detail, I strive to deliver optimized and efficient solutions. 
+                    I enjoy working in collaborative environments and am always eager to learn and grow as a developer.
+                </p>
+                <!-- <p>
+                    I am based out of Trichy, TN. I did my college in Sastra University, where I pursued B.Tech in Information Technology. In my leisure time, I enjoy playing Table Tennis and Carrom with friends and spending quality time with family.
+                </p> -->
+                <p>
+                    As an AEM developer, I craft transformative experiences that elevate brands and captivate audiences. With relentless passion and unwavering commitment, I shape digital landscapes and redefine possibilities. Let's embark on this thrilling journey together, where innovation meets imagination and technology weaves remarkable narratives that leave lasting impressions. Welcome to the realm of AEM wonders.
+                </p>
+            </div>
         </section>
 
         <section id="portfolio">

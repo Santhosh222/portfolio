@@ -22,14 +22,12 @@ $color-white: #f8f8f8; //#fff;
 $color-black: #0a0a0a; //#000;
 
 // FONT
-$default-font-size: 1.6rem;
-
-// GRID
-// $grid-width: 114rem;
-// $gutter-vertical: 8rem;
-// $gutter-vertical-small: 6rem;
-// $gutter-horizontal: 6rem;
+$default-font-size: 1.8rem;
 
 //  PADDING
 $padding-horizontal: 2rem;
 $padding-vertical: 1rem;
+$padding-vertical-xl: 12rem;
+
+// COMPONENTS
+$animated-container-duration: 1s;

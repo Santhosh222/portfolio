@@ -52,17 +52,50 @@
 }
 
 #about {
-    /** TODO: Remove min-height and background-color styles */
-    min-height: 100vh;
-    background-color: cyan;
+    padding: $padding-vertical-xl $padding-horizontal;
+    display: grid;
+    grid-template-rows: 8rem max-content;
+    grid-template-columns: minmax(30rem, 1fr) minmax(40rem, 1.25fr);
+    gap: 2rem;
+    perspective: 150rem;
+
+    @include respond(tab-port) {
+        grid-template-columns: 1fr;
+    }
+
+    .heading-container {
+        grid-column: 1 / span 2;
+    }
+
+    .image {
+        display: flex;
+        justify-content: center;
+        margin: auto 0;
+
+        @include respond(tab-port) {
+            display: none;
+        }
+    }
+
+    .text {
+        margin: auto 0;
+    }
+
+    img {
+        height: 50rem;
+    }
 }
 
 #portfolio {
     min-height: 120vh;
     background-color: yellowgreen;
+
+    padding: $padding-vertical-xl $padding-horizontal;
 }
 
 #contact {
     min-height: 110vh;
     background-color: blueviolet;
+
+    padding: $padding-vertical-xl $padding-horizontal;
 }

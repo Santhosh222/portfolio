@@ -20,6 +20,23 @@ h2 {
     font-size: 3.5rem;
     font-weight: 700;
     letter-spacing: 2px;
+
+    &::before, &::after {
+        content: '';
+        display: inline-block;
+        border: 1.2rem solid transparent;
+        border-bottom-color: $color-primary;
+    }
+
+    &::before {
+        border-right-color: $color-primary;
+        margin: 0 1.1rem;
+    }
+
+    &::after {
+        border-left-color: $color-primary;
+        margin: 0 1rem;
+    }
 }
 
 h3 {
