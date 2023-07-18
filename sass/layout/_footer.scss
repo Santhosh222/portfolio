@@ -1,0 +1,12 @@
+.footer {
+    background-image: url(../img/bg/milad-fakurian-JTKKRK05NAM-unsplash.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    color: $color-grey-light-3;
+    padding: $padding-vertical-xl $padding-horizontal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7rem;
+}

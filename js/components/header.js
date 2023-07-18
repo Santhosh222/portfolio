@@ -17,7 +17,7 @@ export default class Header {
             .map(navLink => document.querySelector(navLink.hash));
         this.mobileNavExpandBtn = this.element.querySelector(MOBILE_NAV_EXPAND_BTN_SELECTOR);
         this.mobileNav = this.element.querySelector(MOBILE_NAV_SELECTOR);
-        console.log({element: this.element, mobileNav: this.mobileNav});
+        // console.log({element: this.element, mobileNav: this.mobileNav});
 
         this.bindEvents();
     }
@@ -29,10 +29,9 @@ export default class Header {
             this.activateSectionNavLinks(windowTop);
         });
 
-        console.log({mobileNavExpandBtn: this.mobileNavExpandBtn, collapseMobileNav: this.collapseMobileNav});
+        // console.log({mobileNavExpandBtn: this.mobileNavExpandBtn, collapseMobileNav: this.collapseMobileNav});
         this.mobileNavExpandBtn.addEventListener('click', () => this.expandAndCollapseMobileNav());
         document.addEventListener('click', e => this.closeMenuOnDocumentClick(e));
-        // this.mobileNavCollapseBtn.addEventListener('click', () => this.collapseMobileNav());
     }
 
     /**
@@ -72,7 +71,7 @@ export default class Header {
     }
 
     expandAndCollapseMobileNav(event) {
-        console.log('expandMobileNav - ', this.mobileNav);
+        // console.log('expandMobileNav - ', this.mobileNav);
         const isMenuExpanded = this.mobileNavExpandBtn.getAttribute('aria-expanded') === 'true';
         if (!isMenuExpanded) {
             this.mobileNav.classList.add(MOBILE_NAV_EXPANDED_CLASS);

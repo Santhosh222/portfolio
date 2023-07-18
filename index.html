@@ -15,9 +15,9 @@
 </head>
 <body>
     <header id="header" class="header">
-        <div class="header__logo-box">
-            <a href="#" class="header__logo-link"><span class="header__logo">skweb</span></a>
-        </div>        
+        <div class="logo-box">
+            <a href="#" class="logo-link"><span class="logo">skweb</span></a>
+        </div>
         <nav class="header__nav">
             <ul class="header__nav-list">
                 <li class="header__nav-item">
@@ -30,7 +30,7 @@
                     <a href="#portfolio" class="header__nav-link" data-text="Portfolio">Portfolio</a>
                 </li>
                 <li class="header__nav-item">
-                    <a href="#contact" class="header__nav-link" data-text="Contact">Contact</a>
+                    <a href="#footer" class="header__nav-link" data-text="Contact">Contact</a>
                 </li>
             </ul>
             <button class="header__nav-mobile-expand" 
@@ -55,7 +55,6 @@
                 </ul>
             </div>
         </nav>
-
     </header>
 
     <main>
@@ -66,7 +65,7 @@
                     <span class="name"><strong>Santhosh</strong> Kumar</span>
                 </h1>
                 <p class="role">
-                    A <span class="typer" data-words="Web Developer, AEM Developer">Web Developer, AEM Developer</span>
+                    A <span class="typer" data-words="Web Developer, AEM Developer"></span>
                 </p>
                 <a href="#portfolio" class="btn btn-secondary btn-rotated">View Portfolio</a>
             </div>
@@ -89,9 +88,6 @@
                     With my strong problem-solving skills and attention to detail, I strive to deliver optimized and efficient solutions. 
                     I enjoy working in collaborative environments and am always eager to learn and grow as a developer.
                 </p>
-                <!-- <p>
-                    I am based out of Trichy, TN. I did my college in Sastra University, where I pursued B.Tech in Information Technology. In my leisure time, I enjoy playing Table Tennis and Carrom with friends and spending quality time with family.
-                </p> -->
                 <p>
                     As an AEM developer, I craft transformative experiences that elevate brands and captivate audiences. With relentless passion and unwavering commitment, I shape digital landscapes and redefine possibilities. Let's embark on this thrilling journey together, where innovation meets imagination and technology weaves remarkable narratives that leave lasting impressions. Welcome to the realm of AEM wonders.
                 </p>
@@ -102,13 +98,41 @@
 
         </section>
 
-        <section id="contact">
-
-        </section>
+        <!-- <section id="contact">
+        </section> -->
     </main>
 
-    <footer>
-        Footer
+    <footer id="footer" class="footer">
+        <div class="logo-box">
+            <a href="javascript:void(0)" class="logo-link"><span class="logo">skweb</span></a>
+        </div>
+
+        <div class="social">
+            <ul class="social-icons">
+                <li class="social-icon social-icon--facebook">
+                    <a href="https://www.facebook.com/profile.php?id=100008298602804" 
+                        class="social-icon__link" target="_blank">
+                        <img src="https://img.icons8.com/3d-fluency/94/facebook-circled.png" alt="facebook" class="social-icon__image"/>
+                    </a>
+                </li>
+                <li class="social-icon social-icon--linkedin">
+                    <a href="https://www.linkedin.com/in/santhosh-kumar-6986a9b0" 
+                        class="social-icon__link" target="_blank">
+                        <img src="https://img.icons8.com/3d-fluency/94/linkedin.png" alt="linkedin" class="social-icon__image"/>
+                    </a>
+                </li>
+                <li class="social-icon social-icon--github">
+                    <a href="https://github.com/Santhosh222?tab=repositories" 
+                        class="social-icon__link" target="_blank">
+                        <img src="https://img.icons8.com/3d-fluency/94/github.png" alt="github" class="social-icon__image"/>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <p class="copyright">
+            All rights reserved &copy; 2023 <strong>Santhosh Kumar</strong>
+        </p>
     </footer>
 
     <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>

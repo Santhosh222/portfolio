@@ -4,6 +4,7 @@
     // background-image: url(../img/bg/ales-nesetril-Im7lZjxeLhg-unsplash.jpg);
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     min-height: 100vh;
     position: relative;
     display: flex;
@@ -89,13 +90,6 @@
 #portfolio {
     min-height: 120vh;
     background-color: yellowgreen;
-
-    padding: $padding-vertical-xl $padding-horizontal;
-}
-
-#contact {
-    min-height: 110vh;
-    background-color: blueviolet;
 
     padding: $padding-vertical-xl $padding-horizontal;
 }

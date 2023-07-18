@@ -1,0 +1,40 @@
+.social {
+    &-icons {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+    }
+
+    &-icon {
+        &__link {
+            text-decoration: none;
+            display: block;
+            transition: all .3s;
+
+            &:hover,
+            &:focus {
+                transform: translateY(-1rem) scale(1.1);
+                // box-shadow: 0 1.5rem 4rem rgba($color-secondary-dark, .15);
+            }
+        }
+
+        &__image {
+            height: 8rem;
+        }
+
+        &--facebook &__link:hover &__image, 
+        &--facebook &__link:focus &__image {
+            filter: hue-rotate(20deg) drop-shadow($social-btn-shadow);
+        }
+
+        &--linkedin &__link:hover &__image,
+        &--linkedin &__link:focus &__image {
+            filter: hue-rotate(-20deg) drop-shadow($social-btn-shadow);
+        }
+
+        &--github &__link:hover &__image,
+        &--github &__link:focus &__image {
+            filter: invert(1) drop-shadow($social-btn-shadow);
+        }
+    }
+}
