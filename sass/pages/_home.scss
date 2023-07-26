@@ -1,7 +1,6 @@
 #home {
     background-image: radial-gradient(rgba($color-black, .4), rgba($color-black, .4)), 
         url(../img/bg/ales-nesetril-Im7lZjxeLhg-unsplash.jpg);
-    // background-image: url(../img/bg/ales-nesetril-Im7lZjxeLhg-unsplash.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -87,9 +86,8 @@
     }
 }
 
-#portfolio {
-    min-height: 120vh;
-    background-color: yellowgreen;
+#portfolio-section {
+    background-color: $color-grey-light-1;
 
     padding: $padding-vertical-xl $padding-horizontal;
 }

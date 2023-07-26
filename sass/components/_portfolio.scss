@@ -1,0 +1,120 @@
+.portfolio {
+    .btn {
+        animation: fadeIn 1s;
+    }
+
+    &__projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+        grid-gap: 6rem;
+        justify-items: center;
+        margin-top: 5rem;
+    }
+
+    &__project {
+        height: 35rem;
+        max-width: 40rem;
+        color: $color-white;
+        font-size: 3.5rem;
+        position: relative;
+        overflow: hidden;
+        transition: all .4s;
+        animation: showWithOpacityProject .3s forwards;
+
+        &::before, 
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 50%;
+            background-color: rgba($color-primary-dark, .8);
+            position: absolute;
+            left: 0;
+        }
+        
+        &::before {
+            top: -50%;
+            transition: top .4s;
+        }
+
+        &::after {
+            bottom: -50%;
+            transition: bottom .4s;
+        }
+
+        &-image {
+            width: 100%;
+            height: 35rem;
+            object-fit: cover;
+        }
+    
+        &-text {
+            font-size: 2.5rem;
+            position: absolute;
+            top: 2rem;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: all .4s;
+            transition-delay: .2s;
+            z-index: 1;
+            width: 100%;
+            text-align: center;
+        }
+    
+        &-btn {
+            color: $color-black;
+            background-color: $color-white;
+            font-weight: 300;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: all .4s;
+            transition-delay: .3s;
+        }
+
+        &:hover::before {
+            top: 0;
+        }
+
+        &:hover::after {
+            bottom: 0;
+        }
+
+        &:hover &-text {
+            top: 70%;
+            opacity: 1;
+        }
+
+        &:hover &-btn {
+            bottom: 50%;
+            opacity: 1;
+        }
+
+        &--hide {
+            animation: hideWithOpacityProject .3s forwards;
+        }
+    }
+
+    &__projects-no-results {
+        text-align: center;
+        display: none;
+        transition: all .4s;
+
+        p {
+            font-size: 3rem;
+        }
+
+        &--show {
+            display: block;
+        }
+    }
+}
