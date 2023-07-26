@@ -81,7 +81,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            gap: 1rem;
+            gap: 0.8rem;
         }
 
         .line {
@@ -115,7 +115,7 @@
 
         &:hover,
         &:focus {
-            gap: 1.2rem;
+            gap: 1rem;
         }
 
 

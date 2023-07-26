@@ -296,7 +296,7 @@ a {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 1rem; } }
+        gap: 0.8rem; } }
     .header__nav-mobile-expand .line {
       width: 4rem;
       height: .5rem;
@@ -318,7 +318,7 @@ a {
       border-bottom-left-radius: 1rem;
       border-bottom-right-radius: 1rem; }
     .header__nav-mobile-expand:hover, .header__nav-mobile-expand:focus {
-      gap: 1.2rem; }
+      gap: 1rem; }
     .header__nav-mobile-expand[aria-expanded="true"] {
       justify-content: flex-start;
       gap: 0; }
