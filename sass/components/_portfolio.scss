@@ -19,7 +19,11 @@
         position: relative;
         overflow: hidden;
         transition: all .4s;
-        animation: showWithOpacityProject .3s forwards;
+        // animation: showWithOpacityProject .3s;
+        // animation-fill-mode: forwards;
+        // -webkit-animation-fill-mode: forwards;
+        // -o-animation-fill-mode: forwards;
+        display: block;
 
         &::before, 
         &::after {
@@ -100,7 +104,11 @@
         }
 
         &--hide {
-            animation: hideWithOpacityProject .3s forwards;
+            // animation: hideWithOpacityProject .3s;
+            // animation-fill-mode: forwards;
+            // -webkit-animation-fill-mode: forwards;
+            // -o-animation-fill-mode: forwards;
+            display: none;
         }
     }
 

@@ -579,7 +579,7 @@ a {
   position: relative;
   overflow: hidden;
   transition: all .4s;
-  animation: showWithOpacityProject .3s forwards; }
+  display: block; }
   .portfolio__project::before, .portfolio__project::after {
     content: "";
     display: block;
@@ -638,7 +638,7 @@ a {
     bottom: 50%;
     opacity: 1; }
   .portfolio__project--hide {
-    animation: hideWithOpacityProject .3s forwards; }
+    display: none; }
 
 .portfolio__projects-no-results {
   text-align: center;
